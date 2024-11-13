@@ -169,7 +169,7 @@ nav {
   align-content: center;
   min-height: 80vh;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   padding-left: 20px;
 }
 .featured-text-card span {
@@ -368,6 +368,67 @@ h3 {
   cursor: pointer;
 }
 
+/* ----- EDUCATION BOX ----- */
+
+.education-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--first-color);
+}
+
+.education-details {
+  font-weight: 500;
+  color: var(--text-color-second);
+  margin-top: 4px;
+}
+
+.education-description {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-top: 8px;
+  color: var(--text-color-second);
+}
+
+/* Section styling */
+.education-section {
+  background-color: var(--body-color);
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Education item styling */
+.education-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+  overflow: hidden;
+  text-align: center;
+}
+
+.education-description {
+  width: 80%;
+}
+
+.education-item::after {
+  background: var(--first-color);
+}
+
+.education-item:hover.education-item h3,
+.education-item:hover.education-item p,
+.education-item:hover.education-item ul {
+  color: var(--color-white);
+  z-index: 2;
+}
+
 /* ----- PROFESSIONAL EXPERIENCE BOX ----- */
 
 .job-title {
@@ -396,30 +457,32 @@ h3 {
   width: 100%;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Experience item styling */
 .experience-item {
   position: relative;
   display: flex;
-  padding: 20px;
-  width: 100%;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
   background: var(--color-white);
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   overflow: hidden;
-  transition: 0.4s;
 }
 
-.experience-item:hover {
+.experience-item::after {
   background: var(--first-color);
 }
 
-.experience-item:hover.experience-item .job-title,
-.experience-item:hover.experience-item .company-details,
-.experience-item:hover.experience-item .job-description {
+.experience-item:hover.experience-item h3,
+.experience-item:hover.experience-item p,
+.experience-item:hover.experience-item ul {
   color: var(--color-white);
+  z-index: 2;
 }
 
 /* ----- PROJECTS BOX ----- */
@@ -436,8 +499,9 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   width: 30%;
-  height: 250px;
+  height: 300px;
   background: var(--color-white);
   border-radius: 20px;
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
@@ -446,14 +510,37 @@ h3 {
 .project-box > i {
   font-size: 50px;
   color: var(--first-color);
-  margin-bottom: 25px;
 }
-.project-box label {
+.project-box > p {
   font-size: 15px;
-  color: #777;
+  color: var(--text-color-second);
+  max-width: 80%;
 }
+
+.project-box > h3 {
+  font-size: 20px;
+  color: var(--first-color);
+}
+
+.project-box > span {
+  font-size: 15px;
+  color: var(--text-color-second);
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.project-link {
+  text-decoration: none;
+  color: var(--first-color);
+  font-weight: 500;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
 .project-box::after,
-.contact-info::after {
+.contact-info::after,
+.experience-item::after,
+.education-item::after {
   content: "";
   position: absolute;
   bottom: -100%;
@@ -464,14 +551,22 @@ h3 {
   z-index: 1;
 }
 .project-box:hover.project-box::after,
-.contact-info:hover.contact-info::after {
+.contact-info:hover.contact-info::after,
+.experience-item:hover.experience-item::after,
+.education-item:hover.education-item::after {
   bottom: 0;
 }
 .project-box:hover.project-box i,
+.project-box:hover.project-box .project-link,
+.project-box:hover.project-box span,
 .project-box:hover.project-box > h3,
-.project-box:hover.project-box > label {
+.project-box:hover.project-box > p {
   color: var(--color-white);
   z-index: 2;
+}
+
+.project-box:hover.project-box .project-link {
+  text-decoration: underline;
 }
 
 /* ----- CONTACT BOX ----- */
@@ -602,6 +697,15 @@ footer {
 .footer-social-icons > .icon:hover {
   background: var(--first-color-hover);
 }
+
+.icon-link,
+.icon-link:hover,
+.icon-link:visited,
+.icon-link:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 .footer-link {
   text-decoration: none;
   color: var(--text-color-second);

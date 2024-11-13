@@ -53,6 +53,12 @@ sr.reveal(".featured-text-btn", { delay: 200 });
 sr.reveal(".social_icons", { delay: 200 });
 sr.reveal(".featured-image", { delay: 300 });
 
+/* -- EDUCATION BOX -- */
+sr.reveal(".education-item", { interval: 200 });
+
+/* -- PROFESSIONAL EXPERIENCES BOX -- */
+sr.reveal(".experience-item", { interval: 200 });
+
 /* -- PROJECT BOX -- */
 sr.reveal(".project-box", { interval: 200 });
 
