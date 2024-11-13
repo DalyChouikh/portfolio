@@ -1,3 +1,7 @@
+/* ----- DOWNLOAD RESUME FUNCTION ----- */
+function downloadResume() {
+  window.open("./assets/Resume.pdf", "_blank");
+}
 /* ----- NAVIGATION BAR FUNCTION ----- */
 function myMenuFunction() {
   var menuBtn = document.getElementById("myNavMenu");
