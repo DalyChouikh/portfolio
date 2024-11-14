@@ -22,6 +22,7 @@
 
     <title>Portfolio</title>
   </head>
+
   <body>
     <div class="container">
       <!-- --------------- HEADER --------------- -->
@@ -95,6 +96,7 @@
                 <a
                   class="icon-link"
                   href="https://www.instagram.com/dali.chouikh"
+                  target="_blank"
                   ><i class="uil uil-instagram"></i
                 ></a>
               </div>
@@ -102,11 +104,15 @@
                 <a
                   class="icon-link"
                   href="https://linkedin.com/in/mohamedali-chouikh"
+                  target="_blank"
                   ><i class="uil uil-linkedin-alt"></i
                 ></a>
               </div>
               <div class="icon">
-                <a class="icon-link" href="https://github.com/DalyChouikh"
+                <a
+                  class="icon-link"
+                  href="https://github.com/DalyChouikh"
+                  target="_blank"
                   ><i class="uil uil-github-alt"></i
                 ></a>
               </div>
@@ -193,6 +199,7 @@
                   <span>Linux</span>
                   <span>Azure</span>
                   <span>Redis</span>
+                  <span>Discord API</span>
                 </div>
               </div>
             </div>
@@ -283,7 +290,10 @@
                 Developer Groups on Campus ISSAT Sousse to share links
                 professionally.
               </p>
-              <a href="https://gdgc-issatso.tech" class="project-link"
+              <a
+                href="https://gdgc-issatso.tech"
+                class="project-link"
+                target="_blank"
                 >View Project</a
               >
             </div>
@@ -297,6 +307,7 @@
               <a
                 href="https://github.com/DalyChouikh/discord-bot-deli"
                 class="project-link"
+                target="_blank"
                 >Github</a
               >
             </div>
@@ -311,12 +322,14 @@
                 <a
                   href="https://github.com/DalyChouikh/todo-app"
                   class="project-link"
+                  target="_blank"
                   >Github</a
                 >
                 |
                 <a
                   href="https://drive.google.com/file/d/11JFZtPTqhcAzUSG69zDVSKb8BxZSn4n9/view?usp=sharing"
                   class="project-link"
+                  target="_blank"
                   >Demo</a
                 >
               </span>
@@ -332,6 +345,7 @@
               <a
                 href="https://drive.google.com/file/d/1RG7SgHhwAirw-OWgWUqlohP4o_pEbIVP/view?usp=sharing"
                 class="project-link"
+                target="_blank"
                 >Demo</a
               >
             </div>
@@ -358,18 +372,36 @@
             </div>
             <div class="col">
               <div class="form-control">
-                <div class="form-inputs">
-                  <input type="text" class="input-field" placeholder="Name" />
-                  <input type="text" class="input-field" placeholder="Email" />
-                </div>
-                <div class="text-area">
-                  <textarea placeholder="Message"></textarea>
-                </div>
-                <div class="form-button">
-                  <button class="btn">
-                    Send <i class="uil uil-message"></i>
-                  </button>
-                </div>
+                <form class="contact-form">
+                  <div class="form-inputs">
+                    <input
+                      type="text"
+                      id="name"
+                      class="input-field"
+                      placeholder="Name"
+                      required
+                    />
+                    <input
+                      id="email"
+                      class="input-field"
+                      placeholder="Email"
+                      type="email"
+                      required
+                    />
+                  </div>
+                  <div class="text-area">
+                    <textarea
+                      id="message"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form-button">
+                    <button class="contact-form-button btn" type="submit">
+                      Send <i class="uil uil-message"></i>
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -399,7 +431,10 @@
         </div>
         <div class="footer-social-icons">
           <div class="icon">
-            <a class="icon-link" href="https://www.instagram.com/dali.chouikh"
+            <a
+              class="icon-link"
+              href="https://www.instagram.com/dali.chouikh"
+              target="_blank"
               ><i class="uil uil-instagram"></i
             ></a>
           </div>
@@ -407,11 +442,15 @@
             <a
               class="icon-link"
               href="https://linkedin.com/in/mohamedali-chouikh"
+              target="_blank"
               ><i class="uil uil-linkedin-alt"></i
             ></a>
           </div>
           <div class="icon">
-            <a class="icon-link" href="https://github.com/DalyChouikh"
+            <a
+              class="icon-link"
+              href="https://github.com/DalyChouikh"
+              target="_blank"
               ><i class="uil uil-github-alt"></i
             ></a>
           </div>
@@ -428,10 +467,17 @@
     <!-- ----- TYPING JS Link ----- -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <!-- ----- SCROLL REVEAL JS Link ----- -->
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- EMAILJS ----- -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
 
     <!-- ----- MAIN JS ----- -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
