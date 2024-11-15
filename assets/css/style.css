@@ -544,7 +544,8 @@ h3 {
 .project-box::after,
 .contact-info::after,
 .experience-item::after,
-.education-item::after {
+.education-item::after,
+.hobbies-box::after {
   content: "";
   position: absolute;
   bottom: -100%;
@@ -557,7 +558,8 @@ h3 {
 .project-box:hover.project-box::after,
 .contact-info:hover.contact-info::after,
 .experience-item:hover.experience-item::after,
-.education-item:hover.education-item::after {
+.education-item:hover.education-item::after,
+.hobbies-box:hover.hobbies-box::after {
   bottom: 0;
 }
 .project-box:hover.project-box i,
@@ -571,6 +573,50 @@ h3 {
 
 .project-box:hover.project-box .project-link {
   text-decoration: underline;
+}
+
+/* ----- HOBBIES & INTERESTS BOX ----- */
+.hobbies-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.hobbies-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 30%;
+  height: 300px;
+  background: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+  overflow: hidden;
+}
+.hobbies-box > i {
+  font-size: 50px;
+  color: var(--first-color);
+}
+.hobbies-box > p {
+  font-size: 15px;
+  color: var(--text-color-second);
+  max-width: 80%;
+}
+
+.hobbies-box > h3 {
+  font-size: 20px;
+  color: var(--first-color);
+}
+
+.hobbies-box:hover.hobbies-box i,
+.hobbies-box:hover.hobbies-box > h3,
+.hobbies-box:hover.hobbies-box > p {
+  color: var(--color-white);
+  z-index: 2;
 }
 
 /* ----- CONTACT BOX ----- */
@@ -735,6 +781,13 @@ footer {
   margin-top: 10px;
 }
 
+/* ----- MEDIA QUERY == 1072px / RESPONSIVE ----- */
+@media only screen and (max-width: 1072px) {
+  .nav-button {
+    display: none;
+  }
+}
+
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px) {
   .featured-text {
@@ -749,9 +802,6 @@ footer {
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 900px) {
-  .nav-button {
-    display: none;
-  }
   .nav-menu.responsive {
     left: 0;
   }
@@ -813,16 +863,19 @@ footer {
   .col {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
   }
   .about-info,
   .contact-info {
     width: 100%;
   }
-  .project-container {
+  .project-container,
+  .hobbies-container {
     justify-content: center;
   }
-  .project-box {
+  .project-box,
+  .hobbies-box {
     width: 80%;
   }
 }
@@ -833,7 +886,8 @@ footer {
   .featured-name {
     font-size: 40px;
   }
-  .project-box {
+  .project-box,
+  .hobbies-box {
     width: 100%;
   }
   .form-inputs {

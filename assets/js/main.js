@@ -104,6 +104,9 @@ sr.reveal(".experience-item", { interval: 200 });
 /* -- PROJECT BOX -- */
 sr.reveal(".project-box", { interval: 200 });
 
+/* -- HOBBIES & INTERESTS BOX -- */
+sr.reveal(".hobbies-box", { interval: 200 });
+
 /* -- HEADINGS -- */
 sr.reveal(".top-header", {});
 
@@ -179,6 +182,15 @@ function scrollActive() {
       removeActiveClasses();
       document
         .querySelector('.nav-menu a[href="#projects"]')
+        .classList.add("active-link");
+    } else if (
+      sectionId === "hobbies" &&
+      scrollY >= sectionTop &&
+      scrollY < sectionTop + sectionHeight
+    ) {
+      removeActiveClasses();
+      document
+        .querySelector('.nav-menu a[href="#hobbies"]')
         .classList.add("active-link");
     } else if (
       sectionId === "contact" &&
