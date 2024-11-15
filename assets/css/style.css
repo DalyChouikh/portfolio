@@ -413,6 +413,7 @@ h3 {
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   overflow: hidden;
   text-align: center;
+  width: 100%;
 }
 
 .education-description {
