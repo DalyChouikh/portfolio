@@ -1,8 +1,0 @@
-{
-  "name": "portfolio-functions",
-  "version": "1.0.0",
-  "description": "Serverless functions for portfolio site",
-  "dependencies": {
-    "nodemailer": "^6.10.0"
-  }
-}

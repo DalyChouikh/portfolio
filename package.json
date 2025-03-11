@@ -21,7 +21,8 @@
     "react-scroll": "^1.9.3",
     "react-typed": "^2.0.12",
     "scrollreveal": "^4.0.9",
-    "tailwind-merge": "^3.0.2"
+    "tailwind-merge": "^3.0.2",
+    "nodemailer": "^6.10.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
