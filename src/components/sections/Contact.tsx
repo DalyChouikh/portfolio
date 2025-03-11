@@ -24,7 +24,6 @@ function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Call Netlify serverless function instead of EmailJS
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
@@ -40,14 +39,12 @@ function Contact() {
       const result = await response.json();
 
       if (response.ok) {
-        // Show success toast notification
         toast({
           variant: "success",
           title: "Message sent!",
           description: "Your message has been sent successfully.",
         });
 
-        // Clear form data
         setFormData({ name: "", email: "", message: "" });
       } else {
         throw new Error(result.error || "Failed to send message");
@@ -55,7 +52,6 @@ function Contact() {
     } catch (error) {
       console.error("Error sending email:", error);
 
-      // Show error toast notification
       toast({
         variant: "error",
         title: "Error",
