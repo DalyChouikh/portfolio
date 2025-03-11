@@ -88,17 +88,20 @@ function Footer() {
       </div>
 
       <div className="bottom-footer text-sm mt-2.5 mb-12">
-        <p className="text-black">
-          Copyright &copy; {currentYear} Made with ❤️ by
-          <Link
-            to="home"
-            className="text-textSecondary font-medium ml-1 cursor-pointer no-underline hover:text-primary"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            Mohamed Ali CHOUIKH
-          </Link>
+        <p className="text-black flex flex-col sm:flex-row items-center justify-center">
+          <span>Copyright &copy; {currentYear} Made with ❤️</span>
+          <span className="sm:ml-1">
+            by
+            <Link
+              to="home"
+              className="text-textSecondary font-medium ml-1 cursor-pointer no-underline hover:text-primary"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Mohamed Ali CHOUIKH
+            </Link>
+          </span>
         </p>
       </div>
     </footer>
