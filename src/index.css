@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Poppins, system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#222222] text-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply font-medium px-5 py-3 bg-gray-100 border-none rounded-lg cursor-pointer transition-colors duration-300 hover:bg-primary hover:text-white;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-hover;
+  }
+  
+  .section-container {
+    @apply py-20 px-[10vw];
+  }
+  
+  .section-title {
+    @apply text-2xl font-semibold text-white mb-2 text-center;
+  }
+  
+  .skill-badge {
+    @apply text-sm bg-primary text-white px-2 py-0.5 rounded cursor-pointer hover:bg-primary-hover transition-colors duration-300;
+  }
+
+  /* Project box & hobby box hover effects */
+  .project-box::after,
+  .hobbies-box::after,
+  .education-item::after,
+  .experience-item::after,
+  .contact-info::after {
+    @apply content-[''] absolute bottom-[-100%] w-full h-full transition-all duration-300 ease-in-out z-[1];
+    background: theme('colors.primary.DEFAULT');
+  }
+  
+  .project-box:hover::after,
+  .hobbies-box:hover::after,
+  .education-item:hover::after,
+  .experience-item:hover::after,
+  .contact-info:hover::after {
+    @apply bottom-0;
+  }
+  
+  .project-box:hover *,
+  .hobbies-box:hover *,
+  .education-item:hover *,
+  .experience-item:hover * {
+    @apply text-white z-[2] relative;
+  }
+  
+  .project-box:hover .project-link {
+    @apply underline;
+  }
+  
+  .contact-info:hover *,
+  .contact-info:hover h2,
+  .contact-info:hover p,
+  .contact-info:hover i {
+    @apply text-primary z-[2] relative;
+  }
+  
+  .contact-info::after {
+    @apply bg-white;
+  }
+}
+
+/* Animation for the profile image */
+@keyframes imgFloat {
+  50% {
+    transform: translateY(10px);
+    border-radius: 45% 55% 45% 55%;
+  }
+}
+
+.animate-float {
+  animation: imgFloat 7s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
