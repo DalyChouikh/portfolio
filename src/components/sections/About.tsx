@@ -59,17 +59,17 @@ function About() {
     "HTML",
     "CSS",
     "JavaScript",
-    "Typescript",
+    "TypeScript",
     "React",
     "NextJS",
   ];
-  const backendSkills = ["Golang", "JAVA (SpringBoot)", "NestJS", "NextJS"];
-  const databaseSkills = ["MySQL", "PostgreSQL", "MongoDB"];
+  const backendSkills = ["Golang", "Java", "NestJS", "NextJS"];
+  const databaseSkills = ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Firebase"];
   const toolsSkills = [
     "Docker",
     "Kubernetes",
     "Supabase",
-    "Git & Github",
+    "Git",
     "Linux",
     "Azure",
     "Redis",
