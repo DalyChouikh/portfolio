@@ -67,6 +67,7 @@ function About() {
   const databaseSkills = ["MySQL", "PostgreSQL", "MongoDB"];
   const toolsSkills = [
     "Docker",
+    "Kubernetes",
     "Supabase",
     "Git & Github",
     "Linux",
