@@ -83,7 +83,7 @@ function About() {
 
       <div className="flex flex-col md:flex-row justify-between w-full gap-8 md:gap-12">
         <div className="flex w-full md:w-1/2">
-          <div className="about-info relative flex flex-col items-center py-[30px] px-4 sm:px-5 pb-[70px] w-full bg-white rounded-[20px] shadow-custom">
+          <div className="about-info relative flex justify-center flex-col items-center py-[30px] px-4 sm:px-5 pb-[70px] w-full bg-white rounded-[20px] shadow-custom">
             <h3 className="text-xl font-semibold text-primary mb-4">
               About me
             </h3>
